@@ -1,1 +1,1 @@
-To install all dependencies, in console write npm run installAll
+To install all dependencies, in console write npm run installBack and npm run installFront
