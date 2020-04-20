@@ -1,0 +1,630 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background:rgb(255, 253, 128)
+}
+.navbar{
+    background-color: rgb(78, 78, 78);
+    box-shadow: 0 0 5px black;
+    padding: 0 25% 0 25%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    width: 100%;
+    color:white
+}
+
+.navbar > ul{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar > ul > li{
+    display: inline-block;
+    padding: 20px;
+}
+
+.navbar > ul > li > a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar > ul > li > a:hover{
+    color: rgb(199, 199, 199);
+}
+
+.dropdown{
+    display: none;
+    cursor: pointer;
+}
+
+.dropdown-elem{
+    display: inline-block;
+}
+
+.logout{
+    display: block;
+}
+
+@media only screen and (min-width: 992px) {
+    .navbar{
+        padding: 0 25% 0 25% !important;
+    }
+    .navbar > ul > .dropdown-elem{
+        display: inline-block !important;
+    }
+    .dropdown{
+        display: none !important;
+    }
+}
+
+
+@media only screen and (max-width: 992px){
+    .navbar{
+        padding: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 1410px){
+    .navbar{
+        padding: 0 0 0 0 !important;
+    }
+    .background{
+        padding: 70px 0 0 0 !important;
+    }
+    .user-panel > .profile{
+        width: 29% !important;
+    }
+    .single-post > .jumbotron{
+        margin:0 !important;
+        padding: 5% 10px 10% 10px !important;
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar{
+        padding: 0;
+    }
+    .navbar > ul > .dropdown-elem{
+        display: none; 
+    }
+    .dropdown{
+        display: block;
+    }
+    .background{
+        padding: 70px 0 0 0 !important;
+    }
+    .mrp{
+        display: none;
+    }
+    .post-collection{
+        grid-template-columns: 100% 0% !important;
+    }
+    .post{
+        margin-top: 5px !important;
+    }
+    .cat-select{
+        margin-top:20px !important;
+    }
+    .user-panel > .profile{
+        width: 29% !important;
+    }
+    .single-post > .jumbotron{
+        margin:0 !important;
+        padding: 10% 20px 20% 20px !important;
+        width: 100% !important;
+        font-size: 15px !important;
+    }
+    .single-post > .content{
+        font-size: 15px !important;
+    }
+}
+
+.background{
+    background-color: rgb(255, 253, 128);
+    width: 100%;
+    padding-top: 70 !important;
+    padding: 70px 25% 20px 25%;
+}
+
+.post{
+    background-color: rgb(78, 78, 78);
+    margin-top:20px !important;
+    font-family: 'Merriweather', serif;
+    color:white;
+}
+
+.post > .header{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post > .header > div > h1 > a, .post > .header > div > div > a{
+    color: white;
+}
+
+.post > .header > div > h1 > a:hover , .post > .header > div > div > a:hover{
+    color: rgb(199, 199, 199);
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    padding: 0;
+    margin:0;
+}
+.post > .content{
+    padding: 20px;
+    display: flex;
+}
+
+.post > .image > img{
+    width: 100%;
+}
+
+.post-collection{
+    display: grid;
+    grid-template-columns: 70% 29%;
+    grid-column-gap: 1%;
+}
+
+.mr{
+    background-color: rgb(78, 78, 78);
+    color: white;
+    font-size: 20px;
+    margin-top:20px;
+    text-align: center;
+    padding: 12px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.mini{
+    background-color: rgb(78, 78, 78);
+    color: white;
+    margin-top:5px;
+    padding: 20px;
+    font-family: 'Merriweather', serif;
+}
+
+a{
+    cursor: pointer;
+}
+
+.formular{
+    width: 100%;
+    background-color: rgb(78, 78, 78);
+    padding: 20px;
+    margin-top:20px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    flex-direction: column;
+}
+
+.formular > h1{
+    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.formular > form >input[type=email], .formular > form >input[type=password], .formular > form >button[type=submit],.formular > form >input[type=text], .formular > form  > textarea {
+    padding: 10px;
+    color:rgb(78, 78, 78);
+    border: none;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.cat-select{
+    background-color: rgb(78, 78, 78);
+    color: white;
+    margin-top: 20px;
+    z-index: 1;
+    position: sticky;
+    top:70px;
+    border: 1px solid rgb(78, 78, 78);
+}
+
+.cat-select > form > select{
+    border: none;
+    background-color: rgb(78, 78, 78);
+    color: white;
+    padding: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+.cat-select > form > select > option{
+    background-color: rgb(78, 78, 78);
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 70% 20% 10%;
+}
+
+.form > input[type=text]{
+    border: none;
+    background-color: white;   
+    color: black;
+    padding: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+.form > button{
+    border: none;
+    background-color: white;
+    margin-left:1px;    
+    color: black;
+    padding: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+.user-panel{
+    margin-top:20px;
+    display:grid;
+    grid-gap:10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.user-panel > .profile{
+    background-color:rgb(78, 78, 78) ;
+    padding: 20px;
+    width: 100% !important;
+    color:white;
+}
+
+.user-panel > .profile > .img-xy > div {
+    background-color: rgb(78, 78, 78);
+    border-radius: 100px;
+    min-width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: solid 5px rgb(255, 253, 128);
+    
+}
+
+.user-panel > .profile > .img-xy{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.user-panel > .posts{
+    width: 100%;
+}
+
+.user-panel > .title-bar{
+    background-color: rgb(78, 78, 78);
+    padding: 20px;
+    color: white;
+    margin-top:10px;
+    margin-bottom: -10px;
+}
+
+.profile > h2 {
+    text-align: center;
+}
+
+.create{
+    height: 49vh;
+}
+
+.create > form {
+    width: 100%;
+    height: 100%;
+}
+
+.create > form > textarea{
+    width: 100%;
+    height: 50%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+.create > form > input[type=file]{
+    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.create > form > input[type=text]{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+label{
+    font-family: 'Oswald', sans-serif;
+}
+
+.single-post{
+    font-family: 'Oswald', sans-serif;
+}
+
+.single-post > .jumbotron{
+    width: 200%;
+    margin-left: -50%;
+    background-color: rgb(95, 95, 95) !important;
+    height: 25vh;
+    font-family: 'Merriweather', serif;
+    color:white;
+    padding: 15% 50% 25% 50%;
+    box-sizing: border-box;
+}
+
+.single-post > .jumbotron > p > a{
+    color: white;
+    text-decoration: none;
+}
+
+.single-post > .content{
+    padding: 20px;
+    font-size: 20px;
+    background-color: rgb(78, 78, 78);
+    color: white;
+    font-family: 'Merriweather', serif;
+    display:flex;
+    flex-direction: column;
+}
+
+.single-post > .bar{
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(95, 95, 95);
+}
+
+.single-post > .bar > p{
+    padding: 10px;
+    border: none;
+    color: white;
+    text-align: right;
+    background-color: rgb(95, 95, 95);
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.pad{
+    padding: 10px;
+    background-color: rgb(78, 78, 78);
+    color: white;
+}
+
+.addcmt{
+    width: 100%;
+    background-color: rgb(78, 78, 78);
+    padding: 20px;
+}
+
+.addcmt > form > input{
+    padding: 10px;
+    color:rgb(78, 78, 78);
+    border: none;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.addcmt > form > button{
+    padding: 10px;
+    color:rgb(78, 78, 78);
+    border: none;
+    width: 100%;
+}   
+
+.comment{
+    margin-top: 5px;
+
+}
+
+.comment > .content{
+    font-size: 20px;
+}
+
+.comments{
+    background-color: rgb(95, 95, 95);
+}
+
+.comment > .user,.comment > .content{
+
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+}
+
+.modal-info{
+    background-color: rgb(78, 78, 78);
+    width: 100%;
+    position: fixed;
+    bottom:0;
+    font-family: 'Oswald', sans-serif;
+    z-index: 1;
+    text-align: center;
+    box-shadow: 0 0 5px black;
+    color:white;
+    left:0;
+}
+
+
+.modal-info > p{
+    padding: 5px;
+    font-size: 20px;
+
+}
+
+.jumbotron > p > a{
+    color: white;
+    text-decoration: underline !important;
+}
+
+.jumbotron > p > a:hover{
+    color: rgb(199, 199, 199);
+}
+
+.mini > span > a {
+    color:white;
+}
+
+.mini > span > a:hover{
+    color: rgb(199, 199, 199);
+}
+
+.image{
+    background-color: rgb(78, 78, 78);
+    padding: 20px;
+}
+
+.image > img {
+    width: 100%;
+}
+
+.comment > .user > div > button{
+    color: black;
+    background-color: rgb(255, 253, 128);
+    border: solid 3px black;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    cursor: pointer;
+    align-self: auto;
+    margin-left: 5px;
+    padding: 6px 12px;
+}
+
+.comment > .user > div{
+    display: flex;
+    flex-direction: row;
+}
+
+.comment > .user > div > button:hover{
+    color: rgb(255, 253, 128);
+    background-color: black;
+    border: solid 3px rgb(255, 253, 128);
+    transition-duration: 200ms;
+}
+
+.column{
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.jumbotron > div > button{
+    margin-top:10px
+}
+
+.edit > button, .edit > textarea, .jumbotron > div > button, .content > textarea, .title-edit, .save{
+    color: black;
+    background-color: rgb(255, 253, 128);
+    border: solid 3px black;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    padding: 6px 12px;
+}
+
+.edit > button, .save{
+    margin-top:20px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.edit > button:hover, .jumbotron > button:hover,.save:hover,.save:focus,.jumbotron > div > button:focus{
+    color: rgb(255, 253, 128);
+    background-color: black;
+    border: solid 3px rgb(255, 253, 128);
+    transition-duration: 200ms;
+}
+
+.save{
+    width: 100%;
+}
+
+.edit > textarea, .content > textarea{
+    border:3px black dashed;
+    background-color: rgb(255, 253, 128);
+    width: 100%;
+    margin-bottom: 0px !important;
+}
+
+.title-edit{
+    border:3px black dashed;
+    background-color: rgb(255, 253, 128);
+    width: 50%;
+    margin-bottom: 10px !important;
+}
+
+.content > textarea{
+    height: 30vh;
+}
+
+.edit{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashed-border{
+    border:3px black dashed; 
+    border-radius: 5px;
+}
+
+.jumbotron > div > button{
+    margin-right:10px
+}
+
+.user-badge,.user-bar{
+    background-color: rgb(78, 78, 78);
+    
+    width: 100%;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    margin-top:10px;
+    display:grid;
+    grid-template-columns: 20% 10% 10% 10% 50%;
+    cursor: pointer;
+}
+
+.user-bar > div:hover{
+    color:rgb(184, 184, 184);
+    background-color: rgb(70, 70, 70);
+}
+
+.user-badge{
+    border: dashed 3px black;
+    border-radius: 5px;
+    color: black;
+    background-color: rgb(255, 253, 128);
+}
+
+.user-badge > div, .user-bar > div{
+    cursor: pointer; 
+    padding: 10px 15px;
+}
+
+.user-badge > * > a{
+    color: black;
+    text-decoration: none;
+}
+
+.user-badge > * > a:hover{
+    color: rgb(78, 78, 78);
+}
+
+.column > h3 > a{
+    color: white;
+    text-decoration: none;
+}
+
+.column > h3 > a:hover{
+    color: rgb(177, 177, 177);
+}
