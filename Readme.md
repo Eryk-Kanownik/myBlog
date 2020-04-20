@@ -1,0 +1,1 @@
+To install all dependencies, in console write npm run installAll
